@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>`
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <h1>Random Meme Generator</h1>
+  <button id="memeBtn">Get a Meme!</button>+
+  
+  <div class="meme-container">
+    <div class="spinner" id="spinner"></div>
+    <div id="loading">Loading meme...</div>
+    <img id="memeImage" src="" alt="Random Meme" style="display:none;">
+  </div>
+
+  <script>
+    document.getElementById('memeBtn').addEventListener('click', fetchMeme);
+
+    function fetchMeme() {
+      const loadingText = document.getElementById('loading');
+      const spinner = document.getElementById('spinner');
+      const memeImage = document.getElementById('memeImage');
+      
+      loadingText.style.display = 'block';
+      spinner.style.display = 'block';
+      memeImage.style.display = 'none';  // Hide meme while fetching
+
+      fetch('https://meme-api.com/gimme')
+        .then(response => response.json())
+        .then(data => {
+          memeImage.src = data.url;
+          memeImage.style.display = 'block'; // Show meme once loaded
+        })
+        .catch(error => {
+          console.error('Error fetching the meme:', error);
+          loadingText.textContent = 'Failed to load meme.';
+        })
+        .finally(() => {
+          loadingText.style.display = 'none';
+          spinner.style.display = 'none';
+        });
+    }
+  </script>
+
+</body>
+</html>

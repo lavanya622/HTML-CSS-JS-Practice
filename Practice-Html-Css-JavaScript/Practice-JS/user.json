@@ -1,0 +1,17 @@
+{
+    "user1":{
+        "id":1,
+        "name":"raghuveer",
+        "email":"raghu@gmail.com"
+    },
+    "user2":{
+        "id":2,
+        "name":"Bharath",
+        "email":"bharath@gmail.com"
+    },
+    "user3":{
+        "id":3,
+        "name":"king",
+        "email":"king@gmail.com"
+    }
+}

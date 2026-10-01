@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <div id="myDiv">hello world</div>
+   <h1 id="header">hello ,lavanya</h1>
+   <button onclick="changeText()">click me</button>
+   <script>
+    var element =document.getElementById("myDiv")
+    element.textContent = "you are my book"
+    
+    function changeText(){
+        document.getElementById("header").innerText = "you linked the button";
+    }
+    document.body.style.backgroundColor = 'red'
+    let greet = () =>{
+        console.log("hello");
+        
+    }
+    greet()
+    setTimeout(function(){
+        console.log("heloo world");
+        
+    },2000)
+   </script>
+    
+</body>
+</html>

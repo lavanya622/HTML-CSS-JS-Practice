@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button"value="onclick" onclick="on()">
+    <input type="button"value="ondblclick" ondblclick="dbl()">
+    <input type="button"value="onmouseover" onmouseover="mo()">
+    <input type="button"value="onmouseout" onmouseout="mout()">
+    <input type="button"value="onplay" onplay="mess()">
+    <div id="my">
+        hey hii lavanya
+        <button id="button">click</button>
+    </div>
+    <script>
+        var i=document.getElementById("my")
+        var h=document.getElementById("button")
+        function updatetext() {
+        i.textContent="lavanya" 
+        }
+        h.addEventListener("click",updatetext)
+
+        let a=5;
+        console.log(a+=6);
+        console.log(a-=3);
+        console.log(a*=2);
+        console.log(a/=2);
+        console.log(a%=2);
+        let c=2;
+        let b=3;
+        console.log(c&b);
+        console.log(c|b);
+        console.log(c^b);
+        console.log(~c);
+        let d=10;
+        let e=2;
+        console.log(d>>e);
+        console.log(d<<e);
+        let g=5
+        console.log(g+true);
+        console.log(g-false);
+        document.write("hello")
+        
+        function on() {
+            alert("click event")
+        }
+        function dbl() {
+            alert("click event")
+        }
+        function mo() {
+            alert("click event")
+        }
+        function mout() {
+            alert("click event")
+        }
+        console.log(document);
+        function mess() {
+            alert("i am lavanyaaaaaaaaa")
+            
+        }
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
